@@ -104,11 +104,11 @@ namespace MidiControl {
 			//
 
 			// did we do the first-time prompt for self-updating?
-			if(!options.options.DidPromptForUpdateChecking) {
-				options.options.CheckForUpdatesOnStartup = (MessageBox.Show("prompt", "Allow checking for updates?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes);
-				options.options.DidPromptForUpdateChecking = true;
-				options.Save();
-			}
+			//if(!options.options.DidPromptForUpdateChecking) {
+			//	options.options.CheckForUpdatesOnStartup = (MessageBox.Show("prompt", "Allow checking for updates?", MessageBoxButtons.YesNo, //MessageBoxIcon.Question) == DialogResult.Yes);
+			//	options.options.DidPromptForUpdateChecking = true;
+			//	options.Save();
+			//}
 		}
 
 		// theme support functions
