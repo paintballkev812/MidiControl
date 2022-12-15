@@ -59,7 +59,9 @@ namespace MidiControl
 					LastUsedProfile = "Default",
 					ListViewStyle = "icons", // icons, list, details
 					ToolbarPosition = 0, // 0 - top, 1 - bottom
-					Theme = 0
+					Theme = 0,
+					DidPromptForUpdateChecking = false,
+					CheckForUpdatesOnStartup = false
                 };
             }
         }
@@ -90,6 +92,8 @@ namespace MidiControl
 			public string ListViewStyle { get; set; }
 			public int ToolbarPosition { get; set; }
 			public int Theme { get; set; }
+			public bool DidPromptForUpdateChecking { get; set; }
+			public bool CheckForUpdatesOnStartup { get; set; }
         }
     }
 }

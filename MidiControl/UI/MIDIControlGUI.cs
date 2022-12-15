@@ -102,6 +102,13 @@ namespace MidiControl {
 
 			// (if other device manufacturers have MIDI controller editor apps, they can be added in a similar way for convenience to the user :) )
 			//
+
+			// did we do the first-time prompt for self-updating?
+			if(!options.options.DidPromptForUpdateChecking) {
+				options.options.CheckForUpdatesOnStartup = (MessageBox.Show("prompt", "Allow checking for updates?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes);
+				options.options.DidPromptForUpdateChecking = true;
+				options.Save();
+			}
 		}
 
 		// theme support functions
