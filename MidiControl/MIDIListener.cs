@@ -21,6 +21,7 @@ namespace MidiControl
         private readonly AudioControl audioControl;
         private readonly TwitchChatControl twitchControl;
         private readonly GoXLRControl goXLRControl;
+        private readonly ProgramControl programControl;
 
         private readonly OptionsManagment options = OptionsManagment.GetInstance();
 
@@ -30,6 +31,7 @@ namespace MidiControl
             audioControl = new AudioControl();
             goXLRControl = new GoXLRControl();
             twitchControl = new TwitchChatControl(options.options, conf.Config);
+            programControl = new ProgramControl();
 
             this.conf = conf;
 
@@ -276,6 +278,10 @@ namespace MidiControl
                             goXLRControl.Toggle(entry.Value.GoXLRCallBackON.Input, entry.Value.GoXLRCallBackON.Output, entry.Value);
                         }
                     }
+                    if (entry.Value.ProgramCallBackON != null)
+                    {
+                        programControl.LaunchProgram(entry.Value.ProgramCallBackON.File, entry.Value.ProgramCallBackON.Arguments, entry.Value.ProgramCallBackON.Hidden);
+                    }
                 }
                 else if (((e.MidiEvent.CommandCode == MidiCommandCode.NoteOff || (e.MidiEvent.CommandCode == MidiCommandCode.NoteOn && ((NoteEvent)e.MidiEvent).Velocity == 0))) && entry.Value.Input == Event.Note )
                 {
@@ -324,6 +330,10 @@ namespace MidiControl
                         {
                             goXLRControl.Toggle(entry.Value.GoXLRCallBackOFF.Input, entry.Value.GoXLRCallBackOFF.Output, entry.Value);
                         }
+                    }
+                    if (entry.Value.ProgramCallBackOFF != null)
+                    {
+                        programControl.LaunchProgram(entry.Value.ProgramCallBackOFF.File, entry.Value.ProgramCallBackOFF.Arguments, entry.Value.ProgramCallBackOFF.Hidden);
                     }
                 }
                 else if (e.MidiEvent.CommandCode == MidiCommandCode.ControlChange && entry.Value.Input == Event.Slider)

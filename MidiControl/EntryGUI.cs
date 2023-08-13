@@ -164,6 +164,20 @@ namespace MidiControl
                 TxtBoxTwitchMessageRelease.Text = keybind.TwitchCallBackOFF.Messsage;
             }
 
+            if (keybind.ProgramCallBackON != null)
+            {
+                TxtBoxProgramPress.Text = keybind.ProgramCallBackON.File;
+                TxtBoxArgsPress.Text = keybind.ProgramCallBackON.Arguments;
+                ChkBoxHideProgramPress.Checked = keybind.ProgramCallBackON.Hidden;
+            }
+
+            if (keybind.ProgramCallBackOFF != null)
+            {
+                TxtBoxProgramRelease.Text = keybind.ProgramCallBackOFF.File;
+                TxtBoxArgsRelease.Text = keybind.ProgramCallBackOFF.Arguments;
+                ChkBoxHideProgramRelease.Checked = keybind.ProgramCallBackOFF.Hidden;
+            }
+
             if (keybind.SoundCallBack != null)
             {
                 ChkBoxEnableAudio.Checked = true;
@@ -763,6 +777,7 @@ namespace MidiControl
 
 
             CheckToCombo.Add("ChkBoxEnableAudio", new string[] { "CboBoxAudioDevice", "TxtBoxAudioFile", "BtnAudioSelect", "ChkBoxAudioStop" });
+
 
             CheckToCombo.Add("ChkBoxSwitchToProfilePress", new string[] { "CboBoxProfilePress" });
             CheckToCombo.Add("ChkBoxSwitchToProfileRelease", new string[] { "CboBoxProfileRelease" });
@@ -1510,6 +1525,26 @@ namespace MidiControl
                 };
             }
 
+            // Program Launch
+            if (TxtBoxProgramPress.Text != "")
+            {
+                key.ProgramCallBackON = new ProgramCallBack
+                {
+                    File = TxtBoxProgramPress.Text,
+                    Arguments = TxtBoxArgsPress.Text,
+                    Hidden = ChkBoxHideProgramPress.Checked
+                };
+            }
+            if (TxtBoxProgramRelease.Text != "")
+            {
+                key.ProgramCallBackOFF = new ProgramCallBack
+                {
+                    File = TxtBoxProgramRelease.Text,
+                    Arguments = TxtBoxArgsRelease.Text,
+                    Hidden = ChkBoxHideProgramRelease.Checked
+                };
+            }
+
             // Go XLR
             if (RadioButtonToggleXLRPress.Checked)
             {
@@ -1670,6 +1705,36 @@ namespace MidiControl
                 CboBoxFilterSettingSlider.Items.Add(property);
             }
             CboBoxFilterSettingSlider.SelectedIndex = 0;
+        }
+
+        private void BtnProgramSelectPress_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdlg = new OpenFileDialog
+            {
+                Title = "Select File",
+                InitialDirectory = @"c:\",
+                Filter = "All files (*.*)|*.*",
+                RestoreDirectory = true
+            };
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                TxtBoxProgramPress.Text = fdlg.FileName;
+            }
+        }
+
+        private void BtnProgramSelectRelease_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdlg = new OpenFileDialog
+            {
+                Title = "Select File",
+                InitialDirectory = @"c:\",
+                Filter = "All files (*.*)|*.*",
+                RestoreDirectory = true
+            };
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                TxtBoxProgramRelease.Text = fdlg.FileName;
+            }
         }
     }
 }

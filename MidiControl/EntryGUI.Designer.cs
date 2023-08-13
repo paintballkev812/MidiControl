@@ -108,6 +108,13 @@
             this.RadioButtonDisabledXLRPress = new System.Windows.Forms.RadioButton();
             this.CboBoxXLROutputPress = new System.Windows.Forms.ComboBox();
             this.CboBoxXLRInputPress = new System.Windows.Forms.ComboBox();
+            this.tabLaunchProgramKeyPress = new System.Windows.Forms.TabPage();
+            this.ChkBoxHideProgramPress = new System.Windows.Forms.CheckBox();
+            this.lblArgsPress = new System.Windows.Forms.Label();
+            this.TxtBoxArgsPress = new System.Windows.Forms.TextBox();
+            this.lblFilePress = new System.Windows.Forms.Label();
+            this.BtnProgramSelectPress = new System.Windows.Forms.Button();
+            this.TxtBoxProgramPress = new System.Windows.Forms.TextBox();
             this.GrpBoxKeyRelease = new System.Windows.Forms.GroupBox();
             this.TabKeyRelease = new System.Windows.Forms.TabControl();
             this.TabOBSRelease = new System.Windows.Forms.TabPage();
@@ -171,6 +178,13 @@
             this.RadioButtonDisabledXLRRelease = new System.Windows.Forms.RadioButton();
             this.CboBoxXLROutputRelease = new System.Windows.Forms.ComboBox();
             this.CboBoxXLRInputRelease = new System.Windows.Forms.ComboBox();
+            this.tabLaunchProgramKeyRelease = new System.Windows.Forms.TabPage();
+            this.ChkBoxHideProgramRelease = new System.Windows.Forms.CheckBox();
+            this.lblArgsRelease = new System.Windows.Forms.Label();
+            this.TxtBoxArgsRelease = new System.Windows.Forms.TextBox();
+            this.lblFileRelease = new System.Windows.Forms.Label();
+            this.BtnProgramSelectRelease = new System.Windows.Forms.Button();
+            this.TxtBoxProgramRelease = new System.Windows.Forms.TextBox();
             this.GrpBoxKeySlider = new System.Windows.Forms.GroupBox();
             this.TabKeySlider = new System.Windows.Forms.TabControl();
             this.TabOBSSlider = new System.Windows.Forms.TabPage();
@@ -191,6 +205,7 @@
             this.TabMIDIControlPress.SuspendLayout();
             this.TabGoXLRControlPress.SuspendLayout();
             this.PanelXLRPress.SuspendLayout();
+            this.tabLaunchProgramKeyPress.SuspendLayout();
             this.GrpBoxKeyRelease.SuspendLayout();
             this.TabKeyRelease.SuspendLayout();
             this.TabOBSRelease.SuspendLayout();
@@ -201,6 +216,7 @@
             this.TabMIDIControlRelease.SuspendLayout();
             this.TabGoXLRControlRelease.SuspendLayout();
             this.PanelXLRRelease.SuspendLayout();
+            this.tabLaunchProgramKeyRelease.SuspendLayout();
             this.GrpBoxKeySlider.SuspendLayout();
             this.TabKeySlider.SuspendLayout();
             this.TabOBSSlider.SuspendLayout();
@@ -301,6 +317,7 @@
             this.TabKeyPress.Controls.Add(this.TabTwitchPress);
             this.TabKeyPress.Controls.Add(this.TabMIDIControlPress);
             this.TabKeyPress.Controls.Add(this.TabGoXLRControlPress);
+            this.TabKeyPress.Controls.Add(this.tabLaunchProgramKeyPress);
             this.TabKeyPress.Location = new System.Drawing.Point(6, 20);
             this.TabKeyPress.Name = "TabKeyPress";
             this.TabKeyPress.SelectedIndex = 0;
@@ -1114,6 +1131,74 @@
             this.CboBoxXLRInputPress.Size = new System.Drawing.Size(121, 21);
             this.CboBoxXLRInputPress.TabIndex = 1;
             // 
+            // tabLaunchProgramKeyPress
+            // 
+            this.tabLaunchProgramKeyPress.Controls.Add(this.ChkBoxHideProgramPress);
+            this.tabLaunchProgramKeyPress.Controls.Add(this.lblArgsPress);
+            this.tabLaunchProgramKeyPress.Controls.Add(this.TxtBoxArgsPress);
+            this.tabLaunchProgramKeyPress.Controls.Add(this.lblFilePress);
+            this.tabLaunchProgramKeyPress.Controls.Add(this.BtnProgramSelectPress);
+            this.tabLaunchProgramKeyPress.Controls.Add(this.TxtBoxProgramPress);
+            this.tabLaunchProgramKeyPress.Location = new System.Drawing.Point(4, 22);
+            this.tabLaunchProgramKeyPress.Name = "tabLaunchProgramKeyPress";
+            this.tabLaunchProgramKeyPress.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLaunchProgramKeyPress.Size = new System.Drawing.Size(560, 219);
+            this.tabLaunchProgramKeyPress.TabIndex = 6;
+            this.tabLaunchProgramKeyPress.Text = "Launch Program";
+            this.tabLaunchProgramKeyPress.UseVisualStyleBackColor = true;
+            // 
+            // ChkBoxHideProgramPress
+            // 
+            this.ChkBoxHideProgramPress.AutoSize = true;
+            this.ChkBoxHideProgramPress.Location = new System.Drawing.Point(6, 58);
+            this.ChkBoxHideProgramPress.Name = "ChkBoxHideProgramPress";
+            this.ChkBoxHideProgramPress.Size = new System.Drawing.Size(141, 17);
+            this.ChkBoxHideProgramPress.TabIndex = 16;
+            this.ChkBoxHideProgramPress.Text = "Hide Launched Program";
+            this.ChkBoxHideProgramPress.UseVisualStyleBackColor = true;
+            // 
+            // lblArgsPress
+            // 
+            this.lblArgsPress.AutoSize = true;
+            this.lblArgsPress.Location = new System.Drawing.Point(4, 35);
+            this.lblArgsPress.Name = "lblArgsPress";
+            this.lblArgsPress.Size = new System.Drawing.Size(57, 13);
+            this.lblArgsPress.TabIndex = 15;
+            this.lblArgsPress.Text = "Arguments";
+            // 
+            // TxtBoxArgsPress
+            // 
+            this.TxtBoxArgsPress.Location = new System.Drawing.Point(67, 32);
+            this.TxtBoxArgsPress.Name = "TxtBoxArgsPress";
+            this.TxtBoxArgsPress.Size = new System.Drawing.Size(218, 20);
+            this.TxtBoxArgsPress.TabIndex = 14;
+            // 
+            // lblFilePress
+            // 
+            this.lblFilePress.AutoSize = true;
+            this.lblFilePress.Location = new System.Drawing.Point(6, 9);
+            this.lblFilePress.Name = "lblFilePress";
+            this.lblFilePress.Size = new System.Drawing.Size(23, 13);
+            this.lblFilePress.TabIndex = 13;
+            this.lblFilePress.Text = "File";
+            // 
+            // BtnProgramSelectPress
+            // 
+            this.BtnProgramSelectPress.Location = new System.Drawing.Point(477, 4);
+            this.BtnProgramSelectPress.Name = "BtnProgramSelectPress";
+            this.BtnProgramSelectPress.Size = new System.Drawing.Size(75, 23);
+            this.BtnProgramSelectPress.TabIndex = 12;
+            this.BtnProgramSelectPress.Text = "Browse ...";
+            this.BtnProgramSelectPress.UseVisualStyleBackColor = true;
+            this.BtnProgramSelectPress.Click += new System.EventHandler(this.BtnProgramSelectPress_Click);
+            // 
+            // TxtBoxProgramPress
+            // 
+            this.TxtBoxProgramPress.Location = new System.Drawing.Point(67, 6);
+            this.TxtBoxProgramPress.Name = "TxtBoxProgramPress";
+            this.TxtBoxProgramPress.Size = new System.Drawing.Size(407, 20);
+            this.TxtBoxProgramPress.TabIndex = 11;
+            // 
             // GrpBoxKeyRelease
             // 
             this.GrpBoxKeyRelease.Controls.Add(this.TabKeyRelease);
@@ -1132,6 +1217,7 @@
             this.TabKeyRelease.Controls.Add(this.TabTwitchRelease);
             this.TabKeyRelease.Controls.Add(this.TabMIDIControlRelease);
             this.TabKeyRelease.Controls.Add(this.TabGoXLRControlRelease);
+            this.TabKeyRelease.Controls.Add(this.tabLaunchProgramKeyRelease);
             this.TabKeyRelease.Location = new System.Drawing.Point(7, 20);
             this.TabKeyRelease.Name = "TabKeyRelease";
             this.TabKeyRelease.SelectedIndex = 0;
@@ -1865,6 +1951,74 @@
             this.CboBoxXLRInputRelease.Size = new System.Drawing.Size(121, 21);
             this.CboBoxXLRInputRelease.TabIndex = 10;
             // 
+            // tabLaunchProgramKeyRelease
+            // 
+            this.tabLaunchProgramKeyRelease.Controls.Add(this.ChkBoxHideProgramRelease);
+            this.tabLaunchProgramKeyRelease.Controls.Add(this.lblArgsRelease);
+            this.tabLaunchProgramKeyRelease.Controls.Add(this.TxtBoxArgsRelease);
+            this.tabLaunchProgramKeyRelease.Controls.Add(this.lblFileRelease);
+            this.tabLaunchProgramKeyRelease.Controls.Add(this.BtnProgramSelectRelease);
+            this.tabLaunchProgramKeyRelease.Controls.Add(this.TxtBoxProgramRelease);
+            this.tabLaunchProgramKeyRelease.Location = new System.Drawing.Point(4, 22);
+            this.tabLaunchProgramKeyRelease.Name = "tabLaunchProgramKeyRelease";
+            this.tabLaunchProgramKeyRelease.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLaunchProgramKeyRelease.Size = new System.Drawing.Size(560, 211);
+            this.tabLaunchProgramKeyRelease.TabIndex = 7;
+            this.tabLaunchProgramKeyRelease.Text = "Launch Program";
+            this.tabLaunchProgramKeyRelease.UseVisualStyleBackColor = true;
+            // 
+            // ChkBoxHideProgramRelease
+            // 
+            this.ChkBoxHideProgramRelease.AutoSize = true;
+            this.ChkBoxHideProgramRelease.Location = new System.Drawing.Point(5, 58);
+            this.ChkBoxHideProgramRelease.Name = "ChkBoxHideProgramRelease";
+            this.ChkBoxHideProgramRelease.Size = new System.Drawing.Size(141, 17);
+            this.ChkBoxHideProgramRelease.TabIndex = 11;
+            this.ChkBoxHideProgramRelease.Text = "Hide Launched Program";
+            this.ChkBoxHideProgramRelease.UseVisualStyleBackColor = true;
+            // 
+            // lblArgsRelease
+            // 
+            this.lblArgsRelease.AutoSize = true;
+            this.lblArgsRelease.Location = new System.Drawing.Point(2, 35);
+            this.lblArgsRelease.Name = "lblArgsRelease";
+            this.lblArgsRelease.Size = new System.Drawing.Size(57, 13);
+            this.lblArgsRelease.TabIndex = 10;
+            this.lblArgsRelease.Text = "Arguments";
+            // 
+            // TxtBoxArgsRelease
+            // 
+            this.TxtBoxArgsRelease.Location = new System.Drawing.Point(65, 32);
+            this.TxtBoxArgsRelease.Name = "TxtBoxArgsRelease";
+            this.TxtBoxArgsRelease.Size = new System.Drawing.Size(218, 20);
+            this.TxtBoxArgsRelease.TabIndex = 9;
+            // 
+            // lblFileRelease
+            // 
+            this.lblFileRelease.AutoSize = true;
+            this.lblFileRelease.Location = new System.Drawing.Point(2, 9);
+            this.lblFileRelease.Name = "lblFileRelease";
+            this.lblFileRelease.Size = new System.Drawing.Size(23, 13);
+            this.lblFileRelease.TabIndex = 8;
+            this.lblFileRelease.Text = "File";
+            // 
+            // BtnProgramSelectRelease
+            // 
+            this.BtnProgramSelectRelease.Location = new System.Drawing.Point(478, 4);
+            this.BtnProgramSelectRelease.Name = "BtnProgramSelectRelease";
+            this.BtnProgramSelectRelease.Size = new System.Drawing.Size(75, 23);
+            this.BtnProgramSelectRelease.TabIndex = 7;
+            this.BtnProgramSelectRelease.Text = "Browse ...";
+            this.BtnProgramSelectRelease.UseVisualStyleBackColor = true;
+            this.BtnProgramSelectRelease.Click += new System.EventHandler(this.BtnProgramSelectRelease_Click);
+            // 
+            // TxtBoxProgramRelease
+            // 
+            this.TxtBoxProgramRelease.Location = new System.Drawing.Point(65, 6);
+            this.TxtBoxProgramRelease.Name = "TxtBoxProgramRelease";
+            this.TxtBoxProgramRelease.Size = new System.Drawing.Size(407, 20);
+            this.TxtBoxProgramRelease.TabIndex = 6;
+            // 
             // GrpBoxKeySlider
             // 
             this.GrpBoxKeySlider.Controls.Add(this.TabKeySlider);
@@ -2019,6 +2173,8 @@
             this.TabGoXLRControlPress.PerformLayout();
             this.PanelXLRPress.ResumeLayout(false);
             this.PanelXLRPress.PerformLayout();
+            this.tabLaunchProgramKeyPress.ResumeLayout(false);
+            this.tabLaunchProgramKeyPress.PerformLayout();
             this.GrpBoxKeyRelease.ResumeLayout(false);
             this.TabKeyRelease.ResumeLayout(false);
             this.TabOBSRelease.ResumeLayout(false);
@@ -2036,6 +2192,8 @@
             this.TabGoXLRControlRelease.PerformLayout();
             this.PanelXLRRelease.ResumeLayout(false);
             this.PanelXLRRelease.PerformLayout();
+            this.tabLaunchProgramKeyRelease.ResumeLayout(false);
+            this.tabLaunchProgramKeyRelease.PerformLayout();
             this.GrpBoxKeySlider.ResumeLayout(false);
             this.TabKeySlider.ResumeLayout(false);
             this.TabOBSSlider.ResumeLayout(false);
@@ -2200,5 +2358,20 @@
         private System.Windows.Forms.Label LblXLRInputPress;
         private System.Windows.Forms.Label LblXLROutputRelease;
         private System.Windows.Forms.Label LblXLRInputRelease;
+		private System.Windows.Forms.CheckBox chkStopAllOthers;
+        private System.Windows.Forms.TabPage tabLaunchProgramKeyPress;
+        private System.Windows.Forms.TabPage tabLaunchProgramKeyRelease;
+        private System.Windows.Forms.Label lblArgsPress;
+        private System.Windows.Forms.TextBox TxtBoxArgsPress;
+        private System.Windows.Forms.Label lblFilePress;
+        private System.Windows.Forms.Button BtnProgramSelectPress;
+        private System.Windows.Forms.TextBox TxtBoxProgramPress;
+        private System.Windows.Forms.Label lblArgsRelease;
+        private System.Windows.Forms.TextBox TxtBoxArgsRelease;
+        private System.Windows.Forms.Label lblFileRelease;
+        private System.Windows.Forms.Button BtnProgramSelectRelease;
+        private System.Windows.Forms.TextBox TxtBoxProgramRelease;
+        private System.Windows.Forms.CheckBox ChkBoxHideProgramRelease;
+        private System.Windows.Forms.CheckBox ChkBoxHideProgramPress;
     }
 }
